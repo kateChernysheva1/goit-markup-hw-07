@@ -1,0 +1,30 @@
+.constant-clients {
+  display: flex;
+  gap: 30px;
+  margin-top: 50px;
+
+  &__item {
+    flex-basis: calc((100% - 150px) / 6);
+
+    min-height: 92px;
+  }
+
+  &__link {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--light-grey);
+    border-radius: 4px;
+    fill: var(--light-grey);
+
+    transition-property: fill, border;
+
+    &:hover,
+    &:focus {
+      border: 1px solid var(--accent-color);
+      fill: var(--accent-color);
+    }
+  }
+}

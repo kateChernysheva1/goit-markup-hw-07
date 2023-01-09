@@ -1,0 +1,95 @@
+header {
+  border-bottom: 1px solid #ececec;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.container-header {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  color: $black-color;
+
+  & span {
+    color: var(--accent-color);
+  }
+}
+
+.list-header {
+  display: flex;
+  align-items: center;
+
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+
+  & a:hover,
+  & a:focus {
+    color: var(--accent-color);
+  }
+}
+
+.site-nav {
+  margin-left: 93px;
+  gap: 50px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    min-height: 79px;
+  }
+
+  &__link {
+    transition-property: color;
+  }
+
+  &__item--current {
+    position: relative;
+
+    color: var(--accent-color);
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: var(--accent-color);
+      border-radius: 2px;
+      width: 100%;
+      height: 4px;
+      left: 0;
+      bottom: -1px;
+    }
+  }
+}
+
+.auth-nav {
+  color: var(--secondary-text-color);
+  margin-left: auto;
+  gap: 30px;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    fill: var(--secondary-text-color);
+
+    transition-property: fill, color;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    fill: var(--accent-color);
+  }
+
+  &__icon {
+    margin-right: 10px;
+  }
+}
